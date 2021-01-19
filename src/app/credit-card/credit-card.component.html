@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading bg-primary text-light heading">
+      Credit Card Payment
+    </div>
+    <div class="panel-body padding">
+      <form class="form-horizontal" [formGroup]="CreditCardPaymentForm">
+        <div class="form-group">
+          <label class="col-lg-4 col-md-4 col-sm-4 lab"
+            >Credit Card Number</label
+          >
+          <input
+            class="form-control col-lg-11 col-md-11 col-sm-11 area1"
+            type="text"
+            formControlName="CreditCardNumber"
+            [(ngModel)]="creditCard.CreditCardNumber"
+          />
+          <p
+            *ngIf="CreditCardPaymentForm.controls.CreditCardNumber.errors"
+            class="alert alert-danger"
+          >
+            Credit Card Number is required!!
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 col-md-3 col-sm-3 lab">Card Holder</label>
+          <input
+            class="form-control col-lg-11 col-md-11 col-sm-11 area1"
+            type="text"
+            formControlName="CardHolder"
+            [(ngModel)]="creditCard.CardHolder"
+          />
+          <p
+            *ngIf="CreditCardPaymentForm.controls.CardHolder.errors"
+            class="alert alert-danger"
+          >
+            Card Holder is required!!
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 col-md-3 col-sm-3 lab">Expiration Date</label>
+          <input
+            class="form-control col-lg-11 col-md-11 col-sm-11 area1"
+            type="date"
+            formControlName="ExpirationDate"
+            [(ngModel)]="creditCard.ExpirationDate"
+            [min]="toStartDate"
+            max="9999-12-31"
+          />
+          <p
+            *ngIf="CreditCardPaymentForm.controls.ExpirationDate.errors"
+            class="alert alert-danger"
+          >
+            Expiration Date is required!!
+          </p>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-4 col-md-4 col-sm-4 lab"
+            >Security Code - CVV</label
+          >
+          <input
+            class="form-control col-lg-11 col-md-11 col-sm-11 area1"
+            type="text"
+            formControlName="SecurityCode"
+            [(ngModel)]="creditCard.SecurityCode"
+          />
+          <p
+            *ngIf="CreditCardPaymentForm.controls.SecurityCode.errors"
+            class="alert alert-danger"
+          >
+            Security Code is required!!
+          </p>
+          <!-- <p *ngIf="creditCard.SecurityCode.length !== 3">
+            SecurityCode should be of length 3
+          </p> -->
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 col-md-3 col-sm-3 lab">Amount</label>
+          <input
+            class="form-control col-lg-11 col-md-11 col-sm-11 area1"
+            type="number"
+            formControlName="Amount"
+            [(ngModel)]="creditCard.Amount"
+          />
+          <p
+            *ngIf="CreditCardPaymentForm.controls.Amount.errors"
+            class="alert alert-danger"
+          >
+            Amount is required!!
+          </p>
+        </div>
+
+        <div class="form-group">
+          <button
+            type="submit"
+            class="btn btn-primary col-lg-3 col-md-3 col-sm-3 area1 hi"
+            (click)="submit()"
+          >
+            Submit
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary col-lg-3 col-md-3 col-sm-3 area2"
+            (click)="goBack()"
+          >
+            Go Back
+          </button>
+
+          <p *ngIf="successfull === true" class="alert alert-danger">
+            Added Successfully!!
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

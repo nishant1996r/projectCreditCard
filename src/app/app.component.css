@@ -1,0 +1,20 @@
+.bordered {
+  border: 1px dashed black;
+  background-color: #eee;
+}
+.butn {
+  float: right;
+  margin-left: auto;
+}
+
+.brand {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.enter {
+  font-size: 14px;
+  width: 5vw;
+  height: 5vh;
+  font-weight: bold;
+}

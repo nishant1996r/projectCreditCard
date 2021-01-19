@@ -1,0 +1,72 @@
+.w {
+  width: 100%;
+  margin-bottom: 1vh;
+}
+
+.tabel-bordered {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+.align {
+  text-align: center;
+  font-size: 12px;
+}
+
+.padding {
+  padding: 1vw;
+}
+
+.container {
+  border: 1px solid blueviolet;
+  border-radius: 4px;
+  height: 50vh;
+  margin-top: 3vh;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  /* height: 100%; */
+}
+
+.placebtn {
+  margin-left: 19vw;
+}
+
+.placebtn1 {
+  margin-left: 17vw;
+}
+
+.size {
+  font-size: 12px;
+}
+
+.dan {
+  font-size: 12px;
+  text-align: center;
+}
+
+.conhead {
+  margin-left: 2vw;
+}
+
+.back {
+  float: right;
+  margin-right: 1vw;
+  font-size: 12px;
+  height: 4vh;
+  padding-bottom: 1vh;
+}
